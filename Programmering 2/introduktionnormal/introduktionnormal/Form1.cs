@@ -63,5 +63,21 @@ namespace introduktionnormal
             }
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Person p = new Person();
+            p.name = textBox4.Text;
+            p.adress = textBox3.Text;
+            p.pnr = textBox1.Text;
+            p.telenr = textBox2.Text;
+
+            personer.Add(p);
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+
+        }
     }
 }
