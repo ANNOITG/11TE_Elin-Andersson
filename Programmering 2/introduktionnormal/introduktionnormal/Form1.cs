@@ -22,12 +22,7 @@ namespace introduktionnormal
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            TextWriter tw = new StreamWriter("object.txt");
-
-            tw.WriteLine("Andre;27;Örebro;23456;34567;\n"
-                        + "Adam;34;Lillkyrka;324587;");
-
-            tw.Close();
+            
 
 
 
@@ -78,6 +73,17 @@ namespace introduktionnormal
             textBox3.Clear();
             textBox4.Clear();
 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            TextWriter tw = new StreamWriter("object.txt");
+
+            foreach (var person in personer)
+            {
+                tw.WriteLine(person.pnr +";" + person.name + ";" + person.adress + ";" + person.telenr);
+            }
+            tw.Close();
         }
     }
 }
