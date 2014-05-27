@@ -1,0 +1,43 @@
+﻿@model projekt_kattsida.Models.Cat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Cat</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Breeds)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Breeds)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CatArtUrl)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CatArtUrl)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CatId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

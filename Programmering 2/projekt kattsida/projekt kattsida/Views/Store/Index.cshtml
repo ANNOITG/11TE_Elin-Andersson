@@ -1,0 +1,15 @@
+﻿@model IEnumerable<projekt_kattsida.Models.Breeds>
+@{
+    ViewBag.Title = "Store";
+}
+<h3>Browse Breeds</h3>
+<p>
+    Select from @Model.Count() breeds:</p>
+<ul>
+    @foreach (var breeds in Model)
+    {
+        
+        <li>@Html.ActionLink(breeds.Name,"Browse", new { breeds = breeds.Name })</li>
+    
+    }
+</ul>

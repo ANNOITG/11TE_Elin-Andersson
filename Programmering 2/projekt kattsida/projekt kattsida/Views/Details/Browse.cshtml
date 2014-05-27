@@ -1,0 +1,16 @@
+﻿@model projekt_kattsida.Models.Breeds
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Browsing Breed: @Model.Name</h2>
+<ul>
+    @foreach (var cat in Model.Cats)
+    {
+        <li>
+            @Html.ActionLink(cat.Name,
+"Details", new { id = cat.CatId })
+        </li>
+    }
+</ul>
